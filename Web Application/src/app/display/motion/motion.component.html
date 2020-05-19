@@ -1,0 +1,6 @@
+<mat-card>
+  <mat-card-header>Motion Detection</mat-card-header>
+  <br>
+  <mat-card-content *ngIf="motion != '-'" justify-content: center><p>{{motion}}</p></mat-card-content>
+  <mat-card-content *ngIf="motion == '-'" justify-content: center><p>Motion not detected  </p></mat-card-content>
+</mat-card>

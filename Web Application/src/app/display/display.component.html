@@ -1,0 +1,72 @@
+<mat-tab-group>
+  <mat-tab label="Sensors">
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile>
+        <app-temperature></app-temperature>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-co_2></app-co_2>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-humidity></app-humidity>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-entrance></app-entrance>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-motion></app-motion>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-tab>
+  <mat-tab label="Location">
+   <app-location></app-location>
+  </mat-tab>
+  <mat-tab label="Actuation">
+    <app-actuation></app-actuation>
+  </mat-tab>
+</mat-tab-group>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <mat-tab-group>
+  <mat-tab label="Sensor">
+    <mat-grid-list cols="2" rowHeight="1.5:1">
+      <mat-grid-tile>
+        <canvas id='chart1'  width="600" height="400"  baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType">
+        </canvas>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-tab>
+  <mat-tab label="Location">
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile>
+        <canvas baseChart
+        [datasets]="scatterChartData"
+        [options]="scatterChartOptions"
+        [chartType]="scatterChartType">
+      </canvas>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-tab>
+</mat-tab-group>
+ -->

@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-header>Led Actuation</mat-card-header>
+  <mat-card-actions>
+    <mat-checkbox [(ngModel)]="checked"  (change)="checkbox_clicked($event)">
+      <p *ngIf="checked">Led is On</p>
+      <p *ngIf="!checked">Led is Off</p>
+    </mat-checkbox>
+  </mat-card-actions>
+</mat-card>

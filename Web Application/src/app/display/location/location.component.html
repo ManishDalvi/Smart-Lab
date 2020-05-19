@@ -1,0 +1,52 @@
+<div>
+  <mat-card>
+    <mat-card-header>Indoor Localisation Location Coordinates</mat-card-header>
+  </mat-card>
+</div>
+<br>
+<div>
+    <mat-label>Add beacon</mat-label>
+</div>
+<div>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Beacon X Coordinate</mat-label>
+      <input [(ngModel)]="x_coordinate" name="x_coordinate" matInput placeholder="X coordinate" value="0">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Beacon Y Coordinate</mat-label>
+      <input [(ngModel)]="y_coordinate" name="y_coordinate" matInput placeholder="Y coordinate" value="0">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button type="submit" color="primary" (click)="addBeacons()">Add beacon</button>
+</div>
+
+
+
+<mat-grid-list cols="2" >
+  <mat-grid-tile>
+    <div style="display: block;">
+      <canvas width="800" height="600" id="chart" baseChart
+        [datasets]="scatterChartData"
+        [options]="scatterChartOptions"
+        [chartType]="scatterChartType">
+      </canvas>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div *ngIf="!valid_zone">
+      <button mat-raised-button color="warn">Warning ! You shouldn't be in this zone</button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+<!-- <div style="display: block;">
+  <canvas width="800" height="600" id="chart" baseChart
+    [datasets]="scatterChartData"
+    [options]="scatterChartOptions"
+    [chartType]="scatterChartType">
+  </canvas>
+</div> -->
+
