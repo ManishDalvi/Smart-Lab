@@ -13,7 +13,7 @@ SensorFusion.py is the code to be run on Raspberry pi connected with sensors.
 sudo chmod 666 /dev/serial0 - Run this in order to gain access to the serial port reading CO2 sensor value
 python SensorFusion.py - Run this to start the sending the Sensor data over MQTT.
     
-mqtt_ESP8226.ino 0 It is an arduino code that can be uploaded to NodeMCU-1.0 board. This file is used to receive
+actuator_esp8266.ino 0 It is an arduino code that can be uploaded to NodeMCU-1.0 board. This file is used to receive
 actuation data from the web application inorder to blink led based on button click in the web page. 
 ```    
 
@@ -34,7 +34,7 @@ Execute "ng serve" - This will host Angular web page on http://localhost:4200/
 ```
 Connect Raspberry Pi to WIFI and run MQTT Broker and note down the IP of the Pi.
     
-Change the WiFi details in the mqtt_esp8266.ino so that it can also connect to the WiFi.
+Change the WiFi details in the actuator_esp8266.ino so that it can also connect to the WiFi.
     
 Obtain the IP of the device where MQTT Broker is running.
     
@@ -43,7 +43,7 @@ obtained IP address of the MQTT broker else the MQTT will not connect.
     
 Follow the same for Hardware devices in the following files
 1. SensorFusion.py
-2. mqtt_esp8266.ino
+2. actuator_esp8266.ino
     
 This allows all the devices to connect over the same MQTT broker
 ```    
